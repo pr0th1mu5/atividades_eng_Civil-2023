@@ -45,6 +45,24 @@ int main()
 
 ```
 >	QT05 (0,25 pontos) - Altere o código acima para que seja lido diretamente do teclado um valor inteiro, ao invés de atribuído. Mostre todos os valores lidos ao final.
+```C
+#include<stdio.h>
+int main()
+{
+     int meuVetor[10];
+     int numero;
+     
+     for(int i=0; i<10; i++){
+     	printf("Digite um valor inteiro: ");
+     	scanf("%d",&numero);
+     	meuVetor[i]=numero*2;
+     }
+     for(int i=0; i<10; i++){
+     	printf("Posição %d e valor => %d \n",i,meuVetor[i]);
+     }
+}
+```
+
 
 Em algumas situações temos que impor condições para obter dados de tudo o que foi lido e armazenado em uma lista de vetores. Vejamos um exemplo no código abaixo:
 ```C
