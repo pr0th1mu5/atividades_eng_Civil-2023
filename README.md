@@ -78,12 +78,16 @@ int main(){
   }
 }
 ```
->  Tarefa 01 - Altere o código e execute-o no falcon++ para que ele imprime todos os números entre 20 e 40. Após conseguir, basta copiar as linhas de código e colar aqui e realize o commit. #include<stdio.h>
+>  Tarefa 01 - Altere o código e execute-o no falcon++ para que ele imprime todos os números entre 20 e 40. Após conseguir, basta copiar as linhas de código e colar aqui e realize o commit.
+```C
+#include<stdio.h>
 int main(){
-	for(int i=20; i<41;i++){
-    printf("\nEsse é o valor de i: %d",i);
-  }
+    for(int i=20; i<41;i++){
+      printf("\n Esse e o valor de i: %d",i);
+    }
+
 }
+```
 
 ## Revisando Laços de Repetição: While.
 #### Aqui iremos agora focar no laço de repetição While.
@@ -103,6 +107,20 @@ int main(){
 }
 ```
 >  Tarefa 2 - Altere o código anterior para mostrar a frase "esse é o valor escolhido" quando a variável "parada" for igual a 9. Copie e cole o código aqui e realize o commit.
+```C
+#include<stdio.h>
+int main(){
+   int parada = 0;
+   while(parada<=20){
+      printf("\n O valor da parada agora: %d",parada);
+      if(parada ==9){
+         printf("\n Esse e o valor escolhido: %d",parada);
+      }
+      parada++;
+   }
+
+}
+```
 
 ## Revisando Laços de Repetição: Do
 #### Agora iremos finalizar nosso último laço de repetição. Iremos usar o do.
@@ -127,3 +145,29 @@ int main(){
 }
 ```
 >  Tarefa 3 - Altera o código para que quando seja escolhido 1, seja escrito "você escolheu cafe da manhã". Quando 2, seja escrito "você escolheu almoço". Quando 3, seja escrito "você escolheu agora jantar". Copie o código aqui e realize o commit.
+ ```C
+ #include<stdio.h>
+  int main(){
+   int incremento = 0;
+   do{
+       printf("\n############# CARDAPIO VIRTUAL ##############");
+       printf("\n[1]-Cafe");
+       printf("\n[2]-Almoço");
+       printf("\n[3]-Janta");
+       printf("\n[99]-Sair do Menu");
+       printf("\n#############################################");
+       printf("\nEscolha a um numero do cardapio: ");
+       scanf("%d",&incremento);
+       if(incremento ==1)
+           printf("\n Voce escolheu cafe da manha");
+       	
+       if(incremento ==2)
+	   printf("\n Voce escolheu almoço");
+	      
+       if(incremento ==3)
+       	   printf("\n Voce escolheu agora jantar");
+          
+	}while(incremento !=99);
+	
+}
+```
