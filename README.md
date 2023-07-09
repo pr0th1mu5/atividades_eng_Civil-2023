@@ -178,6 +178,58 @@ int main()
 ```
 
 >	QT07 (0,5 - pontos) - Refaça a mesma questão anterior utilizando o While e acrescentando uma condição de parada chamada "Totalizar" representada pelo número 99 no menu.
+```C
+#include <stdio.h>
+
+int main()
+{
+    int votos[20]; // Vetor para armazenar os votos
+    int flamengo = 0, vasco = 0, saoPaulo = 0, corinthians = 0; // Variáveis para totalizar os votos
+    int voto = 0; // Variável para ler o voto
+
+    printf("Digite os votos (1-Flamengo, 2-Vasco, 3-São Paulo, 4-Corinthians):\n");
+
+    // Ler os votos
+    int i = 0;
+    while (i < 20) {
+        printf("Voto %d: ", i+1);
+        scanf("%d", &voto);
+
+        // Verificar o voto e atualizar a contagem
+        if (voto == 99) {
+            break; // Condição de parada "Totalizar" (99)
+        } else if (voto >= 1 && voto <= 4) {
+            switch (voto) {
+                case 1:
+                    flamengo++;
+                    break;
+                case 2:
+                    vasco++;
+                    break;
+                case 3:
+                    saoPaulo++;
+                    break;
+                case 4:
+                    corinthians++;
+                    break;
+            }
+            i++; // Incrementar o contador apenas se o voto for válido
+        } else {
+            printf("Voto inválido. Tente novamente.\n");
+        }
+    }
+
+    // Exibir a contagem dos votos
+    printf("Total de votos:\n");
+    printf("Flamengo: %d\n", flamengo);
+    printf("Vasco: %d\n", vasco);
+    printf("São Paulo: %d\n", saoPaulo);
+    printf("Corinthians: %d\n", corinthians);
+
+    return 0;
+}
+```
+
 
 >	QT08 (0,5 - pontos) - Crie um vetor de 20 posições para ler números correspondente ao estilo musical da turma (1 - Sertanejo, 2 - Internacional, 3 - Pop, 4 - Coreano, 5 - Forró, 6 - Funk, 7 - Gospel, 8 - Rock, 9 - Eletrônica, 10 - Classica). Totalize os votos por estilo e mostre ao final. Utilize o Do..while.
 
