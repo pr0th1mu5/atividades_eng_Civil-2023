@@ -251,6 +251,24 @@ Na estrutura básica temos:
 >	int main()
 > 	{} //chaves para o escopo do código.
 ### Atividade QT01 (0,1 pontos) - Reescreva o código criando mais duas variáveis inteiras e mostre-as na saída padrão.
+```C
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    
+    a = 20;
+    b = 15;
+    c = 10;
+    
+    printf("O valor de a é: %d\n", a);
+    printf("O valor de b é: %d\n", b);
+    printf("O valor de c é: %d\n", c);
+    
+    return 0;
+}
+```
 
 ## Revisando estrutura condicional.
 
@@ -271,6 +289,21 @@ Na estrutura acima temos:
 >	O uso de uma estrutura condicional com o if
 >	Seu escopo também inicia com chaves e termina com chaves.
 ### Atividade QT02 (0,1 pontos) - Reescreva o código criando mais uma estrutura if para uma frase se valores de a forem maiores que 20.
+```C
+#include <stdio.h>
+int main(){
+    int a;
+    a = 20;
+    
+    if (a < 20) {
+        printf("O valor é menor que 20\n");
+    }
+    else if (a > 20) {
+        printf("O valor é maior que 20\n");
+    }
+return 0;
+}
+```
 
 ## Revisando estrutura condicional com if - else.
 
@@ -293,6 +326,24 @@ Na estrutura acima temos:
 >	O uso de uma estrutura condicional com o if e outra para o else
 >	Seu escopo também inicia com chaves e termina com chaves também.
 ### Atividade QT03 (0,1 pontos) - Reescreva o código com estrutura if-else para uma frase se valores forem negativos ou positivos.
+```C
+#include <stdio.h>
+
+int main() {
+    int a;
+    a = 20;
+
+    if (a < 0) {
+        printf("O valor é negativo.\n");
+    } else if (a > 0) {
+        printf("O valor é positivo.\n");
+    } else {
+        printf("O valor é zero.\n");
+    }
+
+    return 0;
+}
+```
 
 ## Revisando Laços de Repetição: for.
 ##### Nessa atividade iremos revisar através de código escrito em C, como podemos trabalhar com esse tipo de variável que pode armazenar dados de um único tipo.
