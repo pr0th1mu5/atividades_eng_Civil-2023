@@ -27,6 +27,39 @@ int main()
 }
 ```
 >	QT04 (0,25 pontos) - Altere o código acima para 10 posições de vetor atribuindo 10 valores inteiros manuais e imprimindo todos eles na tela.
+```C
+#include <stdio.h>
+
+int main()
+{
+    int meuVetor[10];
+    
+    meuVetor[0] = 32;
+    meuVetor[1] = 10;
+    meuVetor[2] = 5;
+    meuVetor[3] = 14;
+    meuVetor[4] = 22;
+    meuVetor[5] = 27;
+    meuVetor[6] = 11;
+    meuVetor[7] = 3;
+    meuVetor[8] = 19;
+    meuVetor[9] = 7;
+    
+    printf("O valor do vetor na posição 0 é: %d\n", meuVetor[0]);
+    printf("O valor do vetor na posição 1 é: %d\n", meuVetor[1]);
+    printf("O valor do vetor na posição 2 é: %d\n", meuVetor[2]);
+    printf("O valor do vetor na posição 3 é: %d\n", meuVetor[3]);
+    printf("O valor do vetor na posição 4 é: %d\n", meuVetor[4]);
+    printf("O valor do vetor na posição 5 é: %d\n", meuVetor[5]);
+    printf("O valor do vetor na posição 6 é: %d\n", meuVetor[6]);
+    printf("O valor do vetor na posição 7 é: %d\n", meuVetor[7]);
+    printf("O valor do vetor na posição 8 é: %d\n", meuVetor[8]);
+    printf("O valor do vetor na posição 9 é: %d\n", meuVetor[9]);
+    
+    return 0;
+}
+```
+
 
 Para cada valor a partir da posição zero do vetor, temos um elemento. Cada posição é representada pelo símbolo de colchetes. Sempre iniciará da posição zero. Dessa forma, se o vetor de elementos tem 3 posições corresponderá às posições 0,1,2 (três elementos). A mesma ideia se aplica a qualquer quantidade de elementos.
 Quando essa quantidade é bem grande, usamos laços de repetição. Observe o código abaixo.
