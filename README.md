@@ -3,8 +3,100 @@
 # Funções em C
 
 >	Declare funções. Uma com opção de menu para o R.U, Biblioteca Central, Teatro ou H.U e mostre-os na tela. Outra que mostre apenas uma saudação do dia após leitura do nome da pessoa. (QT9 - 0,25)
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+void mostrarMenu() {
+    printf("Selecione uma opcao:\n");
+    printf("1. R.U\n");
+    printf("2. Biblioteca Central\n");
+    printf("3. Teatro\n");
+    printf("4. H.U\n");
+    printf("Escolha uma opcao (1-4): ");
+    
+    int opcao;
+    scanf("%d", &opcao);
+    
+    switch(opcao) {
+        case 1:
+            printf("Voce selecionou R.U\n");
+            break;
+        case 2:
+            printf("Voce selecionou Biblioteca Central\n");
+            break;
+        case 3:
+            printf("Voce selecionou Teatro\n");
+            break;
+        case 4:
+            printf("Voce selecionou H.U\n");
+            break;
+        default:
+            printf("Opcao invalida\n");
+    }
+}
+
+void mostrarSaudacao() {
+    char nome[100];
+    printf("Digite seu nome: ");
+    scanf("%s", nome);
+    
+    printf("Bom dia, %s!\n", nome);
+}
+
+int main() {
+    mostrarMenu();
+    mostrarSaudacao();
+    
+    return 0;
+}
+```
 
 >	Declare funções para: Totalizar a quantidade de árvores em cada setor(CCHL, CCE, CT, CCN, DIE, CCS) da ufpi através de entrada de dados pelo teclado. Ao final mostrar o total de árvores na UFPI. (Q10 - 25).
+```C
+#include <stdio.h>
+
+// Função para totalizar a quantidade de árvores em um setor específico
+int totalizarArvoresSetor(char setor[]) {
+    int quantidadeArvores;
+    printf("Informe a quantidade de árvores no setor %s: ", setor);
+    scanf("%d", &quantidadeArvores);
+    return quantidadeArvores;
+}
+
+int main() {
+    int totalUFPI = 0;
+
+    // Totalizar árvores no setor CCHL
+    int arvoresCCHL = totalizarArvoresSetor("CCHL");
+    totalUFPI += arvoresCCHL;
+
+    // Totalizar árvores no setor CCE
+    int arvoresCCE = totalizarArvoresSetor("CCE");
+    totalUFPI += arvoresCCE;
+
+    // Totalizar árvores no setor CT
+    int arvoresCT = totalizarArvoresSetor("CT");
+    totalUFPI += arvoresCT;
+
+    // Totalizar árvores no setor CCN
+    int arvoresCCN = totalizarArvoresSetor("CCN");
+    totalUFPI += arvoresCCN;
+
+    // Totalizar árvores no setor DIE
+    int arvoresDIE = totalizarArvoresSetor("DIE");
+    totalUFPI += arvoresDIE;
+
+    // Totalizar árvores no setor CCS
+    int arvoresCCS = totalizarArvoresSetor("CCS");
+    totalUFPI += arvoresCCS;
+
+    // Mostrar o total de árvores na UFPI
+    printf("\nTotal de arvores na UFPI: %d\n", totalUFPI);
+
+    return 0;
+}
+```
 # Vetores em C
 Declarar e preencher um vetor em C nos possibilita muitas utilizações. Observe a estrutura básica de um vetor em C.
 Observe o código abaixo.
