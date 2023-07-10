@@ -324,6 +324,75 @@ int main()
 
 
 >	QT08 (0,5 - pontos) - Crie um vetor de 20 posições para ler números correspondente ao estilo musical da turma (1 - Sertanejo, 2 - Internacional, 3 - Pop, 4 - Coreano, 5 - Forró, 6 - Funk, 7 - Gospel, 8 - Rock, 9 - Eletrônica, 10 - Classica). Totalize os votos por estilo e mostre ao final. Utilize o Do..while.
+```C
+#include <stdio.h>
+
+int main() {
+    int votos[20]; // vetor para armazenar os votos
+    int contagem[10] = {0}; // vetor para contar os votos por estilo musical
+    int i, estilo;
+
+    printf("Digite o número correspondente ao estilo musical da turma:\n");
+    printf("1 - Sertanejo\n2 - Internacional\n3 - Pop\n4 - Coreano\n5 - Forró\n");
+    printf("6 - Funk\n7 - Gospel\n8 - Rock\n9 - Eletrônica\n10 - Clássica\n");
+
+    i = 0;
+    do {
+        printf("Voto %d: ", i + 1);
+        scanf("%d", &estilo);
+
+        if (estilo >= 1 && estilo <= 10) {
+            votos[i] = estilo;
+            contagem[estilo - 1]++; // incrementa a contagem do estilo correspondente
+            i++;
+        } else {
+            printf("Estilo inválido. Digite novamente.\n");
+        }
+    } while (i < 20);
+
+    printf("\nResultados da votação:\n");
+    printf("-----------------------\n");
+
+    for (i = 0; i < 10; i++) {
+        switch (i + 1) {
+            case 1:
+                printf("Sertanejo: %d votos\n", contagem[i]);
+                break;
+            case 2:
+                printf("Internacional: %d votos\n", contagem[i]);
+                break;
+            case 3:
+                printf("Pop: %d votos\n", contagem[i]);
+                break;
+            case 4:
+                printf("Coreano: %d votos\n", contagem[i]);
+                break;
+            case 5:
+                printf("Forró: %d votos\n", contagem[i]);
+                break;
+            case 6:
+                printf("Funk: %d votos\n", contagem[i]);
+                break;
+            case 7:
+                printf("Gospel: %d votos\n", contagem[i]);
+                break;
+            case 8:
+                printf("Rock: %d votos\n", contagem[i]);
+                break;
+            case 9:
+                printf("Eletrônica: %d votos\n", contagem[i]);
+                break;
+            case 10:
+                printf("Clássica: %d votos\n", contagem[i]);
+                break;
+            default:
+                break;
+        }
+    }
+
+    return 0;
+}
+```
 
 ## Revisando estrutura básica
 
