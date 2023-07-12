@@ -130,6 +130,59 @@ int main() {
 }
 ```
 >	QT12(0,25) - Crie estruturas em C para organizar alguma necessidade sua e realize o cadastro dos registros. Utilize estruturas de loop para realizar mais de um registro. Ao final, apresente todos os cadastros realizados. Justifique todo o seu código.
+```C
+#include <stdio.h>
+
+#define MAX_MAT 10 // Define o número máximo de matérias
+
+// Definição da estrutura para armazenar os dados de cada matéria
+struct Materia {
+    char nome[50];
+    int aulasSemana;
+    int horasEstudoExtra;
+};
+
+int main() {
+    int numMaterias;
+
+    printf("Digite o número de matérias no período: ");
+    scanf("%d", &numMaterias);
+
+    // Verifica se o número de matérias não excede o limite máximo
+    if (numMaterias > MAX_MAT) {
+        printf("Número de matérias excede o limite máximo.\n");
+        return 1;
+    }
+
+    struct Materia materias[MAX_MAT]; // Cria um array de estruturas para armazenar os registros
+
+    // Realiza o cadastro dos registros
+    for (int i = 0; i < numMaterias; i++) {
+        printf("\nMatéria %d:\n", i+1);
+        printf("Digite o nome da matéria: ");
+        scanf(" %[^\n]s", materias[i].nome); // Lê o nome da matéria, ignorando possíveis espaços em branco no início
+        printf("Digite a quantidade de aulas por semana: ");
+        scanf("%d", &materias[i].aulasSemana);
+        printf("Digite a quantidade de horas de estudo extra classe: ");
+        scanf("%d", &materias[i].horasEstudoExtra);
+    }
+
+    // Exibe os registros cadastrados
+    printf("\nRegistros cadastrados:\n");
+    for (int i = 0; i < numMaterias; i++) {
+        printf("\nMatéria %d:\n", i+1);
+        printf("Nome: %s\n", materias[i].nome);
+        printf("Aulas por semana: %d\n", materias[i].aulasSemana);
+        printf("Horas de estudo extra classe: %d\n", materias[i].horasEstudoExtra);
+    }
+
+    return 0;
+}
+Nesse programa eu busquei colocar em um único lugar dados que estão relacionados e que são fundamentais para a minha
+vida acadêmica. Assim, criei um código que pudece dizer a quantidade de matérias que vou cursar em um dado período,
+a quantidades de aulas que terei por semana em cada matéria e quantas horas terei para estudar nos tempos livres para
+cada matéria.
+```
 
 
 # Funções em C
