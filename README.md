@@ -58,6 +58,77 @@ int main(void)
 }
 ```
 >	QT11(0,25) - Crie estruturas novas e correlacione com sua realidade. Use estruturas de repetição e estruturas switch. Ao final, as fichas com os cadastros deverão ser apresentadas.
+```C
+#include <stdio.h>
+
+#define MAX_ALUNOS 100
+
+struct Aluno {
+    char nome[50];
+    int periodos;
+    char curso[50];
+};
+
+void lerDadosAluno(struct Aluno *aluno) {
+    printf("Digite o nome: ");
+    scanf(" %[^\n]s", aluno->nome);
+
+    printf("Digite o número de períodos cursados: ");
+    scanf("%d", &(aluno->periodos));
+
+    printf("Digite o curso: ");
+    scanf(" %[^\n]s", aluno->curso);
+}
+
+void imprimirDadosAluno(struct Aluno aluno) {
+    printf("Nome: %s\n", aluno.nome);
+    printf("Períodos cursados: %d\n", aluno.periodos);
+    printf("Curso: %s\n", aluno.curso);
+}
+
+int main() {
+    struct Aluno alunos[MAX_ALUNOS];
+    int numAlunos = 0;
+    int opcao;
+
+    printf("Selecione uma opção:\n");
+    printf("1 - Inserir novo aluno\n");
+    printf("0 - Encerrar programa\n");
+
+    do {
+        printf("\nOpção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                if (numAlunos < MAX_ALUNOS) {
+                    printf("\nAluno %d:\n", numAlunos + 1);
+                    lerDadosAluno(&alunos[numAlunos]);
+                    numAlunos++;
+                } else {
+                    printf("Limite máximo de alunos atingido.\n");
+                }
+                break;
+
+            case 0:
+                printf("Encerrando o programa...\n");
+                break;
+
+            default:
+                printf("Opção inválida. Tente novamente.\n");
+                break;
+        }
+    } while (opcao != 0);
+
+    printf("\nDados dos alunos:\n");
+    for (int i = 0; i < numAlunos; i++) {
+        printf("\nAluno %d:\n", i + 1);
+        imprimirDadosAluno(alunos[i]);
+    }
+
+    return 0;
+}
+```
 >	QT12(0,25) - Crie estruturas em C para organizar alguma necessidade sua e realize o cadastro dos registros. Utilize estruturas de loop para realizar mais de um registro. Ao final, apresente todos os cadastros realizados. Justifique todo o seu código.
 
 
