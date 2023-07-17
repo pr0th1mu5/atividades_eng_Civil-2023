@@ -1,6 +1,43 @@
 # Aprendendo Programação em C
 #### Um jeito diferente de aprender programação.
 
+## Vetor de registros
+
+```C
+#include <stdio.h>
+#include<stdlib.h>
+
+//Definindo a estrutura e criando o nosso cardápio
+struct Cardapio{
+    char tipoTapioca[30];
+    int qtdBolo;
+    char tipoCafe[20];
+};
+//Programa principal
+int main() {
+    //criando nosso vetor 'rest' do tipo estrutura de cardápio.
+    struct Cardapio rest[2];
+    //lendo os pedidos e preenchendo nosso registro.
+    for (int i=0; i<2;i++){
+        printf("\nTipo tapioca.: ");
+        scanf("%s",rest[i].tipoTapioca);
+        printf("\nQtd Bolo.: ");
+        scanf("%d",&rest[i].qtdBolo);
+        printf("\ntipo cafe.: ");
+        scanf("%s",rest[i].tipoCafe);
+    }
+//Imprimindo todos os pedidos feitos	
+    for (int i=0; i<2; i++){
+        printf("\n-------------------------------------");
+        printf("\ntapioca => %s",rest[i].tipoTapioca);
+        printf("\nbolos=> %d",rest[i].qtdBolo);
+        printf("\ncafe=> %s",rest[i].tipoCafe);
+    }
+    return 0;
+}
+```
+>	QT13(crucial) - Altere o código acima para preencher um vetor de registros de 10 posições, ems seguida mostre todos os pedidos feitos. Após isso, crie seu próprio código de vetor de registro. Comente cada linha do código de acordo com seu entendimento.
+
 # Registros em C - Uma forma legal de criar uma "ficha" sobre alguma coisa.
 ### Nos exemplos a seguir vamos ver códigos com Structs em C que representa um registro, ou seja, tipos diferentes de dados em uma mesma estrutura.
 #### Observe o código abaixo auto-explicativo e faça as questões seguintes.
