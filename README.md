@@ -49,6 +49,239 @@ void questao01(){
 }
 
 void questao02(){
+  int a;
+  fflush(stdin);
+  printf("\n\nNo que diz respeito ao uso de condições compostas, quando queremos que as duas condições sejam necessariamente atingidas, usamos OU:");
+  printf("\n[1] - certo");
+  printf("\n[2] - errado");
+  printf("\nEscolha.:");
+  scanf("%d",&a);
+  if(a ==2){
+      printf("\nAcertou. Um ponto");
+  }else{
+      printf("\nErrou. Menos um ponto");
+  }
+  
+}
+
+void questao03(){
+    int b;
+    fflush(stdin);
+    printf("\n\n Para que serve o comando printf:");
+    printf("\n[1] - Encerrar o programa");
+    printf("\n[2] - escrever na tela");
+    printf("\n[3] - ler strings");
+    printf("\n\nEscolha.:");
+    scanf("%d",&b);
+    if(b==2){
+        printf("\nAcertou. Um ponto");
+    }else{
+        printf("\nErrou. Menos um ponto");
+    }
+}
+    
+void questao04(){
+    int c;
+    fflush(stdin);
+    printf("\n\nAssinale a alternativa correspondente a entrada para strings:");
+    printf("\n[1] - gets");
+    printf("\n[2] - scanf");
+    printf("\n[3] - printf");
+    printf("\n\nEscolha.:");
+    scanf("%d",&c);
+    if(c==1){
+        printf("\nAcertou. Um ponto");
+    }else{
+        printf("\nErrou. Menos um ponto");
+    }
+    
+}
+void questao05(){
+    int d;
+    fflush(stdin);
+    printf("\n\nQual o simbolo é usado para representar a condição de diferente:");
+    printf("\n[1] - ==");
+    printf("\n[2] - !=");
+    printf("\n\nEscolha.:");
+    scanf("%d",&d);
+    if(d==2){
+        printf("\nAertou. Um ponto");
+    }else{
+        printf("\nErrou. Menos um ponto");
+    }
+    
+}
+
+void questao06(){
+    int e;
+    fflush(stdin);
+    printf("\n\nQual dos seguintes laços de repetição conta com incremento automático do contador");
+    printf("\n[1] - for");
+    printf("\n[2] - while");
+    printf("\n[3] - do...while");
+    printf("\n\nEscolha.:");
+    scanf("%d",&e);
+    if(e==1){
+        printf("\nAcertou. Um ponto");
+    }else{
+        printf("\nErrou. Menos um ponto");
+    }
+    
+}
+
+void questao07(){
+    int f;
+    fflush(stdin);
+    printf("\n\n int main é a forma correta de declarar uma função sem parametros em C");
+    printf("\n[1] - Certo");
+    printf("\n[2] - Errado");
+    printf("\n\nEscolha.:");
+    scanf("%d",&f);
+    if(f==2){
+        printf("\nAcertou. Um ponto");
+    }else{
+        printf("\nErrou. Menos um ponto");
+    }
+    
+}
+
+void questao08(){
+    int g;
+    fflush(stdin);
+    printf("\n\n void soma(int a,int b){return a+b;} é a forma correta de definir uma função dois parametros inteiros, de forma que ela retorne a soma desses valores?");
+    printf("\n[1] - Certo");
+    printf("\n[2] - Errado");
+    printf("\n\nEscolha.:");
+    scanf("%d",&g);
+    if(g==2){
+        printf("\nAcertou. UM ponto");
+    }else{
+        printf("\nErrou. Menos um ponto");
+    }
+    
+    
+}
+
+void questao09(){
+    int h;
+    fflush(stdin);
+    printf("\n\nTodo vetor em C começa a indexar por qual posição?");
+    printf("\n[1] - 0");
+    printf("\n[2] - 1");
+    printf("\n\nEscolha.:");
+    scanf("%d",&h);
+    if(h==1){
+        printf("\nAcertou. um ponto");
+    }else{
+        printf("\nErrou. menos um ponto");
+    }
+    
+    
+}
+void questao10(){
+    int i;
+    fflush(stdin);
+    printf("\n\nComo é chamado o registro em linguagem C?");
+    printf("\n[1] - STRUCT");
+    printf("\n[2] - scanf");
+    printf("\n\nEscolha.:");
+    scanf("%d",&i);
+    if(i==1){
+        printf("\nAcertou. um ponto");
+    }else{
+        printf("\nErrou. Menos um ponto");
+    }
+    
+}
+int main() {
+    int opc;
+    cabecalho();
+    printf("\n----------------------------------------------------------------------");
+    opc = questoes();
+    while(opc!=11){
+        printf("\n\nQual questão voce deseja fazer.:");
+        scanf("%d",&opc);
+    switch(opc){
+        case 1: {
+            questao01();break;
+        }
+        case 2: {
+            questao02();break;
+        }
+        case 3:{
+            questao03();break;
+        }
+        case 4:{
+            questao04();break;
+        }
+        case 5:{
+            questao05();break;
+        }
+        case 6:{
+            questao06();break;
+        }
+        case 7:{
+            questao07();break;
+        }
+        case 8:{
+            questao08();break;
+        }
+        case 9:{
+            questao09();break;
+        }
+        case 10:{
+            questao10();break;
+        }
+    }
+    }
+    return 0;
+}
+```
+```C
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void cabecalho(){
+    printf("\nMinistério da Educação");
+    printf("\nUniversidade Federal do Piauí");
+    printf("\nDepartamento de Tecnologia");
+    printf("\nCurso de Engenharia Civil");
+}
+
+int questoes(){
+    int questao;
+    printf("\n[1] - Tecnologia");
+    printf("\n[2] - Lógica");
+    printf("\n[3] - Estrutura básica de C");
+    printf("\n[4] - Variaveis");
+    printf("\n[5] - Tipo de dados e condicionais");
+    printf("\n[6] - Laços de repetição");
+    printf("\n[7] - Funções sem parâmetros");
+    printf("\n[8] - Funções com parâmetros");
+    printf("\n[9] - Vetores");
+    printf("\n[10] - Registros");
+    printf("\n[11] - Sair");
+    printf("\nQual questão você deseja fazer.: ");
+    scanf("%d",&questao);
+    return questao;
+}
+
+void questao01(){
+    int x;
+    fflush(stdin);
+    printf("\n\nO que significa na sua opinião 'informática'?");
+    printf("\n[1] - Tecnologias de processamento em meio digital");
+    printf("\n[2] - Informação automática");
+    printf("\n\nEscolha.: ");
+    scanf("%d",&x);
+    if (x == 1){
+        printf("\nmenos um ponto.");
+    }else{
+        printf("\nacertou. Um ponto");
+    }
+}
+
+void questao02(){
     
 }
 
